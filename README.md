@@ -1,5 +1,5 @@
 # pythonordersystem
 
-For mysl installation, use
+For mysql installation, use
 
 python -m pip install mysql-connector-python
