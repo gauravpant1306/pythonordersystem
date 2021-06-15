@@ -38,6 +38,7 @@ class Items:
         #will do later todo
         pass
 
+
 objItems=Items()
 # objItems.itemname="Snickers"
 # objItems.itemcode="67878"
