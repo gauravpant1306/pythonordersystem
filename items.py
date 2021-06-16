@@ -32,6 +32,7 @@ class Items:
                               "price,gstrate) values(%s,%s,%s,%s)",
                               (self.itemcode,self.itemname,self.price,self.gstrate))
         self.dbConn.commit()
+        self.dbConn.close()
         print("Item created")
 
     def checkItemsWithZeroSale(self):
