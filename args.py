@@ -16,6 +16,8 @@ def addNumbers(*nums):
         result = result + num
     return result
 
+
+
 # * means dynamic number of arguments
 def addNumbersWithDefaultArgs(num1 , *nums):
     try:
@@ -25,6 +27,18 @@ def addNumbersWithDefaultArgs(num1 , *nums):
         return result + num1
     except Exception:
         return 0
+
+def printApplicationStatus(**kwargs):
+    try:
+        print("name: "+ kwargs["name"])
+        for key in kwargs.keys():
+            if key == "age":
+                print("age :" + str(kwargs["age"]))
+                print("application complete")
+            else:
+                print("application not complete")
+    except Exception as e:
+        print("Exception : " + e.args[0])
 
 try:
     print("add two no")
@@ -65,3 +79,21 @@ except ZeroDivisionError:
 except Exception:
     print("Some internal error")
 # **kwargs - key value argument pairs
+
+str = [*"PythonClass"]
+print(str)
+
+list =[1,2,3,4,5,6,7]
+
+a,*b,c=list
+
+print(a)
+print(b)
+print(c)
+
+#kwargs - dictionaries
+
+#dictionaries are key value pairs
+application={"name":"prabhat","age":24}
+application2={"name":"prabhat"}
+printApplicationStatus(**application2)
