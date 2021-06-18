@@ -28,6 +28,7 @@ def addNumbersWithDefaultArgs(num1 , *nums):
     except Exception:
         return 0
 
+
 def printApplicationStatus(**kwargs):
     try:
         print("name: "+ kwargs["name"])
@@ -97,3 +98,16 @@ print(c)
 application={"name":"prabhat","age":24}
 application2={"name":"prabhat"}
 printApplicationStatus(**application2)
+
+print(addNumbersWithDefaultArgs(1,3,4))
+addNumbers = lambda arg1,*args:sum(args)+arg1
+print("lambda output")
+print(addNumbers(1,3,4))
+
+addNumbers = (lambda arg1,*args:sum(args)+arg1)(1,2,4)
+print("lambda output with parameter passed")
+print(addNumbers)
+
+cubeOfNumbers = lambda arg1:arg1*arg1*arg1
+print("lambda output")
+print(cubeOfNumbers(6))
